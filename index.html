@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="steps-container">
+      <section class="step-1-container">
+        <div class="number-display-container current-page">1</div>
+        <div class="step-info-container">
+          <p class="step-text">STEP 1</p>
+          <p class="step-description">YOUR INFO</p>
+        </div>
+      </section>
+      <section class="step-2-container">
+        <div class="number-display-container">2</div>
+        <div class="step-info-container">
+          <p class="step-text">STEP 2</p>
+          <p class="step-description">SELECT PLAN</p>
+        </div>
+      </section>
+      <section class="step-3-container">
+        <div class="number-display-container">3</div>
+        <div class="step-info-container">
+          <p class="step-text">STEP 3</p>
+          <p class="step-description">ADD-ONS</p>
+        </div>
+      </section>
+      <section class="step-4-container">
+        <div class="number-display-container">4</div>
+        <div class="step-info-container">
+          <p class="step-text">STEP 4</p>
+          <p class="step-description">SUMMARY</p>
+        </div>
+      </section>
+    </div>
+    <div class="pages-container">
+      <div class="page page-1">
+        <h1>Personal info</h1>
+        <div class="header-description">Please provide your name, email address, and phone number.</div>
+        <form>
+          <div class="input-container">
+            <label for="name-input">Name</label>
+            <input type="text" id="name-input" placeholder="e.g. David Crum">
+          </div>
+          <div class="input-container">
+            <label for="email-input">Email Address</label>
+            <input type="email" id="email-input" placeholder="e.g. whataemail@noob.com">
+          </div>
+          <div class="input-container">
+            <label for="ph-number-input">Phone Number</label>
+            <input type="text" id="ph-number-input" placeholder="e.g. +69 42069 12069">
+          </div>
+        </form>
+      </div>
+      <div class="page page-2">
+        <h1>Select your plan</h1>
+        <div class="header-description">You have the option of monthly or yearly billing.</div>
+        <form class="plans-form">
+          <input type="radio" name="game-type" id="#arcade" value="arcade" checked>
+          <label for="#arcade">
+            <img src="assets/images/icon-arcade.svg" alt="arcade_img">
+            <p class="plan-name">Arcade</p>
+            <p class="plan-cost">$9/mo</p>
+          </label>     
+          <input type="radio" name="game-type" id="#advanced" value="advanced">
+          <label for="#advanced">
+            <img src="assets/images/icon-advanced.svg" alt="advanced_img">
+            <p class="plan-name">Advanced</p>
+            <p class="plan-cost">$12/mo</p>
+          </label>
+          <input type="radio" name="game-type" id="#pro" value="pro">            
+          <label for="#pro">
+            <img src="assets/images/icon-pro.svg" alt="pro_img">
+            <p class="plan-name">Pro</p>
+            <p class="plan-cost">$15/mo</p>
+          </label>
+        </form>
+        <form class="mon-year-form">
+          <input type="checkbox" name="mon-plan-selector" id="#mon-year-checkbox">
+          <label for="#mon-year-checkbox">
+            <div class="slider-circle"></div>
+            <p class="month">Monthly</p>
+            <p class="year">Yearly</p>
+          </label>
+        </form>
+      </div>
+      <div class="page page-3">
+        <h1>Pick add-ons</h1>
+        <div class="header-description">Add-ons help enhance your gaming experience.</div>
+        <form>
+          <label for="online-service">
+            <input type="checkbox" name="add-ons" id="online-service">
+            <div class="mid-section">
+              <h2>Online service</h2>
+              <p class="header-description">Access to multiplayer games</p>
+            </div>
+            <p class="add-on-price">+$1/mo</p>
+          </label>
+          <label for="larger-storage">
+            <input type="checkbox" name="add-ons" id="larger-storage">
+            <div class="mid-section">
+              <h2>Larger storage</h2>
+              <p class="header-description">Extra 1TB of cloud save</p>
+            </div>
+            <p class="add-on-price">+$2/mo</p>
+          </label>
+          <label for="custom-profile">
+            <input type="checkbox" name="add-ons" id="custom-profile">
+            <div class="mid-section">
+              <h2>Customizable profile</h2>
+              <p class="header-description">Custom theme of your profile</p>
+            </div>
+            <p class="add-on-price">+$2/mo</p>
+          </label>
+        </form>
+      </div>
+      <div class="page page-4">
+        <h1>Finishing up</h1>
+        <div class="header-description">Double-check everything looks OK before confirming.</div>
+        <div class="plans-confirm-container">
+          <div class="plan-container">
+            <div class="left-section">
+              <p class="plan-name">Aracde(Monthly)</p>
+              <a href="#" class="change-plan">Change</a>
+            </div>
+            <div class="plan-cost">$9/mo</div>
+          </div>
+        </div>
+        <div class="total-cost-container">
+          <div class="total-text">Total(per month)</div>
+          <div class="total-cost">+$12/mo</div>
+        </div>
+      </div>
+      <div class="page thank-you-page">
+        <img src="assets/images/icon-thank-you.svg" alt="Thank-you">
+        <h1>Thank you!</h1>
+        <div class="header-description">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</div>
+      </div>    
+    </div>
+    <div class="btn-container">
+      <button class="previous-page">Go Back</button>
+      <button class="next-page">Next Step</button>  
+    </div>    
+  </div>
+  <script src="page_switch.js" type="module"></script>
+  <script src="form-validation-checker.js" type="module"></script>
+  <script src="select-plan.js" type="module"></script>
+  <script src="add-ons-display.js" type="module"></script>
+  <script src="summary-page.js" type="module"></script>
+</body>
+</html>
