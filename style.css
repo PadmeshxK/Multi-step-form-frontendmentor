@@ -6,6 +6,14 @@
     box-sizing:border-box;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 body{
     display: flex;
     min-height: 100vh;
