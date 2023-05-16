@@ -129,7 +129,7 @@ function confirmButton(){
             nextBtnEle.innerText = 'Confirm'
             nextBtnEle.classList.add('confirm')       
     }
-    else if(currentPage == 2){
+    else if(currentPage <= 2){
         if (nextBtnEle.classList.contains('confirm')){
             nextBtnEle.innerText = 'Next Step'
             nextBtnEle.classList.remove('confirm')      

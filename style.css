@@ -302,13 +302,17 @@ body{
 }
 
 .page-2 .mon-year-form label{
-    display:block;
+    display:flex;
     position: relative;
     background-color:hsl(213, 96%, 18%);
     width:2.45rem;
     height:1.3rem;
     border-radius:5rem;
     cursor:pointer;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:0.23rem;
+    flex-shrink: 0;
 }
 
 .page-2 .mon-year-form label p{
@@ -330,14 +334,11 @@ body{
 }
 
 .page-2 .mon-year-form label .slider-circle{
-    position:absolute;
     width:0.79rem;
     height:0.79rem;
     border-radius: 50%;
     background:white;
-    top:50%;
-    transform:translateY(-50%);
-    left:calc((1.3rem - 0.79rem) / 2);
+    flex-shrink: 0;
     transition:transform 200ms;
 }
 
@@ -360,7 +361,7 @@ body{
 }
 
 .page-2 .mon-year-form input[type="checkbox"]:checked + label .slider-circle{
-    transform:translate(1.21rem,-50%);              
+    transform:translate(1.21rem);              
 }
 
 /*page-3*/
